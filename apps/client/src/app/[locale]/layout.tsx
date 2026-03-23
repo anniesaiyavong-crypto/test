@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SS - Social POD Platform",
-  description: "Discover, Create, and Sell unique designs. The unified companion for creators and consumers in Laos.",
+  title: "SS",
+  description: "Unified platform for creators and consumers.",
 };
 
 export const viewport: Viewport = {
