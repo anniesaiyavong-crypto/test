@@ -5,8 +5,10 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  output: 'export', // กลับมาใช้ Static Export เพื่อความเสถียรบน Cloudflare Pages
+  // ลบ output: 'export' ออกเพื่อให้ Vercel รันแบบ Full-stack (Serverless) ได้สมบูรณ์
   images: {
+    // บน Vercel เราสามารถเอา unoptimized: true ออกได้ถ้าต้องการใช้ระบบปรับแต่งรูปของ Vercel
+    // แต่เพื่อความประหยัดโควต้าในตอนแรก จะเปิดไว้ก่อนก็ได้ครับ
     unoptimized: true, 
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
