@@ -1,0 +1,49 @@
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import "../globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "SS - Social POD Platform",
+  description: "Discover, Create, and Sell unique designs. The unified companion for creators and consumers in Laos.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
+export const dynamic = 'force-static';
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'th' }, { locale: 'lo' }];
+}
+
+export default async function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const messages = await getMessages();
+  
+  return (
+    <html lang={locale} className={inter.variable}>
+      <body className="antialiased bg-gray-50 min-h-screen">
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}

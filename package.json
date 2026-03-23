@@ -1,0 +1,21 @@
+{
+  "name": "ss-ecosystem",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=apps/client",
+    "dev:client": "npm run start --workspace=apps/client",
+    "android": "npm run android --workspace=apps/client",
+    "ios": "npm run ios --workspace=apps/client",
+    "install:all": "npm install"
+  },
+  "overrides": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-test-renderer": "19.1.0"
+  }
+}

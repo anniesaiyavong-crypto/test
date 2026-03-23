@@ -1,0 +1,20 @@
+# Next.js & React
+node_modules/
+.next/
+out/
+build/
+
+# Cache
+.cache/
+*.pack.gz
+tsconfig.tsbuildinfo
+
+# Environment
+.env*
+!.env.example
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+*.log

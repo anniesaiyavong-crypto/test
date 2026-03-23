@@ -1,0 +1,130 @@
+{
+  "Common": {
+    "explore": "Explore",
+    "profile": "โปรไฟล์",
+    "myDesigns": "งานออกแบบของฉัน",
+    "uploadDesign": "Upload Design",
+    "newDesign": "New Design",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "filter": "Filter:",
+    "all": "all",
+    "active": "active",
+    "draft": "draft"
+  },
+  "Auth": {
+    "welcomeBack": "Welcome back",
+    "signInSubtitle": "Please enter your details to sign in.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "emailError": "Please enter a valid email",
+    "passwordLabel": "Password",
+    "passwordError": "Password must be at least 8 characters",
+    "signInButton": "Sign In",
+    "noAccount": "Don't have an account?",
+    "applyCreator": "Apply as a Creator"
+  },
+  "Dashboard": {
+    "welcomeTitle": "Welcome back, Creator 👋",
+    "welcomeSubtitle": "Here's how your store is performing",
+    "totalDesigns": "Total Designs",
+    "totalEarnings": "Total Earnings",
+    "monthlyViews": "Monthly Views",
+    "pendingOrders": "Pending Orders",
+    "revenue": "Revenue",
+    "last12Months": "Last 12 months",
+    "readyToCreate": "Ready to create?",
+    "uploadStartEarning": "Upload your design and start earning"
+  },
+  "Designs": {
+    "managePortfolio": "Manage your product portfolio",
+    "all": "all",
+    "active": "active",
+    "draft": "draft",
+    "noDesigns": "No designs found",
+    "noDraftActiveDesigns": "You don't have any {filter} designs yet.",
+    "startBuilding": "Start building your portfolio by uploading your first design.",
+    "uploadNow": "Upload Now",
+    "fee": "fee",
+    "dropHereActive": "Drop it here!",
+    "dropHere": "Drop your design here",
+    "uploadLimit": "PNG, JPG, WebP up to 10MB",
+    "browseFiles": "Browse Files"
+  },
+  "Designer": {
+    "editorSubtitle": "Creator Studio Editor",
+    "publishDesign": "Publish Design",
+    "addImage": "Add Image",
+    "deleteSelected": "Delete Selected",
+    "alignCenter": "Align Center Horizontally",
+    "flipHorizontal": "Flip Horizontal",
+    "rotate45": "Rotate 45°",
+    "layerUp": "Layer Up",
+    "layerDown": "Layer Down",
+    "guidelines": "Drag to move • Scale with corners • Rotate with top handle",
+    "uploading": "Uploading Artwork... {progress}%",
+    "uploadFailed": "Failed to add image. Please try again.",
+    "needArtwork": "Please add at least one artwork to your design.",
+    "designMockupTitle": "Design Mockup",
+    "overlayShirt": "T-shirt on Hanger",
+    "overlayDesign": "Your Design Overlay",
+    "overlayTexture": "Texture Overlay",
+    "exportSuccess": "Layout JSON exported successfully! Please check browser console.",
+    "saveDesign": "Save Design",
+    "stickers": "สติ๊กเกอร์",
+    "uploadSticker": "อัปโหลด Sticker ของคุณ",
+    "presets": "สำเร็จรูป"
+  },
+  "Tools": {
+    "salePrice": "Sale Price",
+    "creatorFee": "Your Cut (Creator Fee)",
+    "revenueBreakdown": "Revenue Breakdown",
+    "yourEarnings": "Your Earnings",
+    "platformFee": "Platform Fee",
+    "production": "Production",
+    "youEarn": "You Earn",
+    "netSale": "Net / Sale",
+    "lowEarningsWarning": "⚠️ Your earnings are very low. Consider raising the price or creator fee."
+  },
+  "Feed": {
+    "trending": "Trending Now",
+    "newArrivals": "New Arrivals",
+    "remixThis": "Remix this design",
+    "buyNow": "Buy Now",
+    "addToCart": "Add to Cart",
+    "sharedBy": "ออกแบบโดย {name}",
+    "searchPlaceholder": "ค้นหาลายที่ใช่สำหรับคุณ...",
+    "noResults": "ไม่พบผลลัพธ์สำหรับ \"{query}\""
+  },
+  "Checkout": {
+    "title": "Checkout",
+    "paymentMethod": "Payment Method",
+    "shippingAddress": "Shipping Address",
+    "total": "Total Amount",
+    "payNow": "Confirm Payment",
+    "orderSuccess": "Order Successful!",
+    "transactionFee": "Transaction Fee (1.6%)"
+  },
+  "Wallet": {
+    "balance": "Current Balance",
+    "withdraw": "Withdraw Funds",
+    "minWithdrawal": "Minimum withdrawal is {amount}",
+    "history": "Transaction History",
+    "payoutSuccess": "Funds will be transferred to your bank within 24 hours."
+  },
+  "Metadata": {
+    "homeTitle": "SS - Custom POD Social Platform",
+    "homeDesc": "Create, Share, and Sell your unique designs in Laos.",
+    "studioTitle": "Creator Studio - Design your future"
+  },
+  "Format": {
+    "currency": "{val, number, currency}",
+    "number": "{val, number}"
+  },
+  "Errors": {
+    "network": "Network error, please try again.",
+    "unauthorized": "Please login to continue.",
+    "invalidFile": "File type not supported."
+  }
+}
