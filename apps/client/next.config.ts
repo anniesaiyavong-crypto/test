@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  // ลบ output: 'export' ออกเพื่อให้ใช้ Middleware และ API ได้สมบูรณ์บน Cloudflare
+  output: 'export', // กลับมาใช้ Static Export เพื่อความเสถียรบน Cloudflare Pages
   images: {
     unoptimized: true, 
     remotePatterns: [
@@ -14,11 +14,9 @@ const nextConfig: NextConfig = {
     ],
   },
   typescript: {
-    // ป้องกันปัญหา Type Mismatch ใน Monorepo บน Cloudflare
     ignoreBuildErrors: true,
   },
   eslint: {
-    // ป้องกัน Build พังจาก Lint errors
     ignoreDuringBuilds: true,
   },
 };
