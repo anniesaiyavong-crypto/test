@@ -7,7 +7,8 @@ import "../globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
+  display: "swap", // ช่วยให้ข้อความขึ้นทันทีไม่ต้องรอโหลด font เสร็จ
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {

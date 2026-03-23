@@ -5,15 +5,14 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  // ลบ output: 'export' ออกเพื่อให้ Vercel รันแบบ Full-stack (Serverless) ได้สมบูรณ์
+  // เปิดใช้ Image Optimization ของ Vercel เพื่อให้รูปเล็กลงมากสำหรับเน็ตมือถือ
   images: {
-    // บน Vercel เราสามารถเอา unoptimized: true ออกได้ถ้าต้องการใช้ระบบปรับแต่งรูปของ Vercel
-    // แต่เพื่อความประหยัดโควต้าในตอนแรก จะเปิดไว้ก่อนก็ได้ครับ
-    unoptimized: true, 
+    unoptimized: false, 
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "avatar.vercel.sh" },
     ],
+    formats: ['image/avif', 'image/webp'], // ใช้ฟอร์แมตที่เล็กที่สุด
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -21,6 +20,8 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // บีบอัดไฟล์ที่ส่งออกไปหาผู้ใช้
+  compress: true,
 };
 
 export default withNextIntl(nextConfig);
