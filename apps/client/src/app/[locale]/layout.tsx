@@ -24,10 +24,6 @@ export const viewport: Viewport = {
 
 export const runtime = 'edge';
 
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'th' }, { locale: 'lo' }];
-}
-
 export default async function RootLayout({
   children,
   params,
