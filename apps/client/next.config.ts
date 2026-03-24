@@ -5,14 +5,13 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  // เปิดใช้ Image Optimization ของ Vercel เพื่อให้รูปเล็กลงมากสำหรับเน็ตมือถือ
+  // เปิดใช้ Image Optimization เป็น true บน Cloudflare Pages (ยกเว้นใช้ Image Resizing service ของเขา)
   images: {
-    unoptimized: false, 
+    unoptimized: true, 
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "avatar.vercel.sh" },
     ],
-    formats: ['image/avif', 'image/webp'], // ใช้ฟอร์แมตที่เล็กที่สุด
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -20,8 +19,6 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // บีบอัดไฟล์ที่ส่งออกไปหาผู้ใช้
-  compress: true,
 };
 
 export default withNextIntl(nextConfig);
