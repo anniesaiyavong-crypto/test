@@ -1,4 +1,6 @@
-import { ProductFeed } from "@/features/feed/components/ProductFeed";
+import ProductFeed from "@/features/feed/components/ProductFeed";
+
+export const runtime = 'edge';
 
 export default function HomePage() {
   return (

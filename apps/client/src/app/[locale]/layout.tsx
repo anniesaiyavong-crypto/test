@@ -22,7 +22,7 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-export const dynamic = 'force-static';
+export const runtime = 'edge';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'th' }, { locale: 'lo' }];
