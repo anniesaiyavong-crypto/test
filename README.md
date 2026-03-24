@@ -48,12 +48,21 @@
 3.  **Feature Components**: แต่ละฟีเจอร์ใน `features/` จะจัดการสถานะ (State) และตรรกะ (Logic) ของตัวเอง แยกออกจากกันอย่างชัดเจน.
 4.  **Designer Engine**: ใช้ Fabric.js ในการประมวลผลการออกแบบบนเครื่องของผู้ใช้ (Client-side) และจัดการองค์ประกอบสติกเกอร์ผ่าน API ภายใน.
 
-## 🚀 การ Build บน Cloudflare
+## 🚀 การ Deploy บน Cloudflare
 
-โปรเจกต์นี้ได้รับการตั้งค่าให้ทำงานบน Cloudflare Pages อย่างสมบูรณ์:
-- **Build Command**: `npm run build` (รันคำสั่งจาก root ไปยัง client workspace)
-- **Runtime**: Edge Runtime สำหรับ API และ Server Components
-- **Framework Preset**: Next.js
+โปรเจกต์นี้ได้รับการตั้งค่าให้ทำงานบน Cloudflare Pages อย่างสมบูรณ์ผ่าน `@cloudflare/next-on-pages`:
+
+### การตั้งค่าใน Dashboard:
+- **Framework Preset**: `Next.js`
+- **Root Directory**: `apps/client`
+- **Build Command**: `npm run build && npx @cloudflare/next-on-pages`
+- **Build Output Directory**: `.vercel/output/static`
+- **Compatibility Flags**: ต้องเพิ่ม `nodejs_compat` ในส่วนของ **Settings > Functions** เพื่อรองรับ Next.js Edge Runtime
+
+### การตั้งค่าทางเทคนิคที่สำคัญ:
+- **Edge Runtime**: ทุก Route ถูกตั้งค่าเป็น `export const runtime = 'edge'`
+- **Version Locking**: ล็อคเวอร์ชัน Next.js (15.4.11) เพื่อความเสถียรบนระบบ Workers
+- **No Static Params**: ใช้ Dynamic Routing สำหรับ i18n เพื่อความยืดหยุ่นบน Edge
 
 ---
 สร้างและดูแลโดย Gemini CLI 🚀

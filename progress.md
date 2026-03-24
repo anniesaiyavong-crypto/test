@@ -59,10 +59,9 @@
 - [x] Optimized Lao language rendering by prioritizing `Phetsarath OT` font in `globals.css` to prevent floating vowel issues.
 - [x] Verified complete deletion of the old Expo Mobile app and extraneous directories.
 
-## 2026-03-22 (English-First i18n Migration & Lao Typography)
-- [x] Identified and extracted all hardcoded English strings from `.tsx` components into `messages/en.json` using feature-based namespaces (`Common`, `Auth`, `Dashboard`, `Designs`, `Designer`, `Tools`).
-- [x] Expanded translation structure for future features: `Feed`, `Checkout`, `Wallet`, `Metadata`, `Format`, and `Errors` avoiding breaking changes.
-- [x] Synchronized baseline schema across `en.json`, `lo.json`, and `th.json` to guarantee `next-intl` runtime routing stability.
-- [x] Refactored all UI components to use `useTranslations` from `next-intl`.
-- [x] Dynamically integrated `useTranslations` into inner `zod` schemas for form validations (e.g., `LoginForm.tsx`).
-- [x] Configured Lao font optimizations in `tailwind.config.ts` (`Phetsarath OT`, `Noto Sans Lao`) and applied `line-height: 1.6` in `globals.css` to prevent floating vowels from being cut off.
+## 2026-03-24 (Cloudflare Pages Deployment)
+- [x] Successfully configured Cloudflare Pages with Next.js 15 Edge Runtime.
+- [x] Fixed `package-lock.json` sync issues and locked critical versions (`next@15.4.11`, `@cloudflare/next-on-pages@1.13.16`).
+- [x] Resolved Edge Runtime conflicts by removing `generateStaticParams` and enforcing dynamic routing.
+- [x] Corrected Build Commands and Root Directory settings for Monorepo compatibility.
+- [x] Identified and applied `nodejs_compat` compatibility flag requirement.
